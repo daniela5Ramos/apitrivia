@@ -11,5 +11,9 @@ app.use(express.json());
 app.use('/api/products', productsRoutes);
 app.use('/api/auth', authRoutes);
 
+// Ruta para el endpoint raíz
+app.get('/', (req, res) => {
+    res.send('Bienvenido a mi API');
+  });
 
 export default app;
